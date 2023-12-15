@@ -5,7 +5,23 @@ body {
   justify-content: center;
   height: 100vh;
   margin: 0;
-  background-color: yellow; /* Set yellow background for the entire page */
+  background: linear-gradient(45deg, #ffffff, #ffcc00, #ff0000, #ffffff);
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  font-family: 'Silkscreen', sans-serif;
+  font-display: swap; /* Ensure that text content is displayed using the fallback font while the desired font is loading */
+}
+
+@keyframes gradientAnimation {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
 }
 
 #pokemonContainerWrapper {
@@ -26,10 +42,10 @@ body {
 
 @keyframes breathe {
   0%, 100% {
-    transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
   }
   50% {
-    transform: translate(-50%, -5px); /* Adjust the breathing effect - move up */
+      transform: translate(-50%, -5px); /* Adjust the breathing effect - move up */
   }
 }
 
@@ -54,7 +70,6 @@ body {
   background-color: rgb(0, 0, 0); /* Set the background color to dark gray when loaded */
 }
 
-
 #pokemonList {
   list-style: none;
   padding: 0;
@@ -70,8 +85,6 @@ body {
   transition: opacity 0.5s ease;
   text-align: center;
   color: white;
-
-  /* Adjust the size of each card */
   padding: 10px; /* Add padding for space inside the card */
   border-radius: 8px; /* Add border-radius for a rounded appearance */
 }
