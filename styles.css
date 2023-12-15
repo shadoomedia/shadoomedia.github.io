@@ -52,7 +52,7 @@ body {
 #loading {
   display: flex;
   flex-direction: column;
-  color: yellow;
+  color: rgb(255, 255, 255);
   align-items: center;
   text-align: center;
   position: absolute;
@@ -60,6 +60,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2; /* Set z-index to bring loading in front of the container */
+  animation: breathe 2s infinite;
 }
 
 #pokemonContainer {
